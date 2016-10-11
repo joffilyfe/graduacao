@@ -2,3 +2,4 @@
 
 ##Exercícios
 - Baralho (Revisão sobre interface, poliformismo)
+- Exercício 02 - Refatoramento da aplicação Locadora utilizando os pradões GRASP
