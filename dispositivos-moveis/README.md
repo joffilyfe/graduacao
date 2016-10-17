@@ -6,3 +6,5 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - Meu primeiro Projeto
 - Números (Applicativo para aprender sobre eventos)
 - Tagarela (Aplicativo para aprender sobre imagens e Speech Text)
+- SimOuNão (Operações com botões e imagens)
+- Janela (Chamadas de Dialogs de alertas)

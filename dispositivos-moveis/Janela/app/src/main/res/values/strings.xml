@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Janela</string>
+    <string name="btn_dialog_positive">Confirmar</string>
+    <string name="btn_dialog_negative">Cancelar</string>
+</resources>
