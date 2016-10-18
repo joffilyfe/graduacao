@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Windows</string>
+    <string name="about">Sobre</string>
+    <string name="save">Salvar</string>
+    <string name="edit_text_palavra">Digite alguma coisa para salvar</string>
+    <string name="palavra_button">Palavra</string>
+</resources>

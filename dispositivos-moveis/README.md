@@ -8,3 +8,4 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - Tagarela (Aplicativo para aprender sobre imagens e Speech Text)
 - SimOuNão (Operações com botões e imagens)
 - Janela (Chamadas de Dialogs de alertas)
+- Windows (Chamadas de Intents com e sem retorno)
