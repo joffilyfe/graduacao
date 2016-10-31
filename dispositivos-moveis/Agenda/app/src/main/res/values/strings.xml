@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="btnAddMain">Adicionar Contato</string>
+    <string name="tvNomeCadastroHint">Nome</string>
+    <string name="tvEmailCadastroHint">Email</string>
+    <string name="tvTelefoneCadastroHint">Telefone</string>
+    <string name="btnSaveCadastro">Salvar</string>
+</resources>
