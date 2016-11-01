@@ -11,3 +11,5 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - Windows (Chamadas de Intents com e sem retorno)
 - PhotoBomb (Exemplo de como tirar fotos no Android)
 - Agenda (Exemplo de como manusear objetos entre Activity)
+- **Autenticacao** (Aplicativo como serviço)
+- **UsaAutenticacao** (Aplicativo que chama outro *Autenticacao* )
