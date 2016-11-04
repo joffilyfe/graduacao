@@ -13,3 +13,4 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - Agenda (Exemplo de como manusear objetos entre Activity)
 - **Autenticacao** (Aplicativo como serviço)
 - **UsaAutenticacao** (Aplicativo que chama outro *Autenticacao* )
+- KeroLanche (Implementa a adição de items em uma lista simples)
