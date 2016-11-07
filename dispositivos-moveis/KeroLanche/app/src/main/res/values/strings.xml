@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KeroLanche</string>
+    <string name="title_activity_restaurantes">RestaurantesActivity</string>
 </resources>

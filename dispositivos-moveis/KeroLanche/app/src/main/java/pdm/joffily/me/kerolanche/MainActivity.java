@@ -1,5 +1,7 @@
 package pdm.joffily.me.kerolanche;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,10 +39,16 @@ public class MainActivity extends AppCompatActivity {
         this.btnAdicionarMain.setOnClickListener(new OnClickBotao());
 
 
+        this.lista.add("olar");
+        this.lista.add("Mundo");
         // #READ: O list view precisa de um Adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, this.lista);
-        this.listViewMain.setAdapter(adapter);
+        // Usando um Adapter customizado
+        RestaurantesAdapter ra = new RestaurantesAdapter(this, this.lista);
+        this.listViewMain.setAdapter(ra);
         this.listViewMain.setOnItemClickListener(new OnClickItemLista());
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add);
+        fab.setOnClickListener(new OnClickBotao());
     }
 
     private class OnClickBotao implements View.OnClickListener {
@@ -52,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             if (estabelecimento.length() > 0) {
                 MainActivity.this.lista.add(estabelecimento);
                 MainActivity.this.editTextMain.setText("");
-                ((ArrayAdapter)MainActivity.this.listViewMain.getAdapter()).notifyDataSetChanged();
+                ((RestaurantesAdapter)MainActivity.this.listViewMain.getAdapter()).notifyDataSetChanged();
             }
 
         }
