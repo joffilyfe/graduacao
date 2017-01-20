@@ -16,3 +16,4 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - KeroLanche (Implementa a adição de items em uma lista simples)
 - Arrocha (Jogo exemplo de como capturar inputs e exibir resultados, pós greve)
 - Feelings (Aplicativo exemplo de como Usar Listas customizadas e Chamar Intents com Objetos serializados)
+- BBateria (Aplicativo que recebe notificações do SO)
