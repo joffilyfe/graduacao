@@ -17,3 +17,4 @@ Repositório com projetos e códigos relativos a Disciplina de PDM
 - Arrocha (Jogo exemplo de como capturar inputs e exibir resultados, pós greve)
 - Feelings (Aplicativo exemplo de como Usar Listas customizadas e Chamar Intents com Objetos serializados)
 - BBateria (Aplicativo que recebe notificações do SO)
+- GuardaDados (Aplicativo exemplo de como interagir com o banco de dados SQLite)
