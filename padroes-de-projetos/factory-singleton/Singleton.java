@@ -8,6 +8,9 @@ class Incremental {
 	private int numero;
 	private static Incremental instancia;
 
+	private Incremental() {
+	}
+
 	public static Incremental getInstancia() {
 		if (instancia == null) {
 			instancia = new Incremental();
