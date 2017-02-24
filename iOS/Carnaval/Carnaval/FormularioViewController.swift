@@ -28,16 +28,15 @@ class FormularioViewController: UIViewController {
         let bloco = Bloco(nome: nome!, valor: valor!, quantidade: qtd)
 
         print(bloco)
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
 
+    // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

@@ -25,13 +25,13 @@
                     <navigationItem key="navigationItem" title="Blocos" id="m89-uT-vSV">
                         <barButtonItem key="leftBarButtonItem" title="Sobre" id="WDm-0Z-GPD">
                             <connections>
-                                <segue destination="ypV-TQ-Tff" kind="show" id="4XX-Q8-hqg"/>
+                                <segue destination="ypV-TQ-Tff" kind="show" identifier="principal_sobre" id="4XX-Q8-hqg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Bg-1b-rgV">
                             <color key="tintColor" red="0.0" green="0.40576356649398804" blue="0.99757665395736694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="yvT-W2-1ze" kind="show" id="Ocv-d6-nqn"/>
+                                <segue destination="yvT-W2-1ze" kind="show" identifier="principal_formulario" id="Ocv-d6-nqn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
