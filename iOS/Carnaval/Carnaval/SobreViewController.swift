@@ -12,6 +12,7 @@ class SobreViewController: UIViewController {
 
 
     @IBOutlet var lbQuantidade: UILabel!
+    var cadastro:Cadastro!
     
     /*
     // MARK: - Navigation
@@ -23,4 +24,32 @@ class SobreViewController: UIViewController {
     }
     */
 
+    /*
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad - Sobre")
+    }
+
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        print("viewDidDisappear - Sobre")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("viewWillDisappear - Sobre")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("viewDidAppear - Sobre")
+        self.lbQuantidade.text = "1"
+    }
+     */
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.lbQuantidade.text = String(self.cadastro.quantidade())
+    }
 }

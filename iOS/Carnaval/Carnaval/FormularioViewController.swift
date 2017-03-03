@@ -15,6 +15,8 @@ class FormularioViewController: UIViewController {
     @IBOutlet var tfValor: UITextField!
     @IBOutlet var lbQuantidade: UILabel!
     @IBOutlet var stpQuantidade: UIStepper!
+    var stFormulario:String!
+    var cadastro:Cadastro!
 
     @IBAction func quantidade(_ sender: Any) {
         let qtd = Int(self.stpQuantidade.value)
@@ -28,6 +30,7 @@ class FormularioViewController: UIViewController {
         let bloco = Bloco(nome: nome!, valor: valor!, quantidade: qtd)
 
         print(bloco)
+        self.cadastro.add(bloco: bloco)
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -38,5 +41,32 @@ class FormularioViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+
+    /*
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad - Formulario")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("viewWillAppear - Formulário")
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        print("viewDidDisappear - Formulario")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("viewWillDisappear - Formulário")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("viewDidAppear - Formulario")
+    }
+     */
 
 }
