@@ -13,9 +13,10 @@ class SugerirViewController: UIViewController {
     var cadastro:Cadastro!
     @IBOutlet var nomeInput: UITextField!
     @IBOutlet var chocolateInput: UITextField!
-
+    @IBOutlet var dataEntrega: UIDatePicker!
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(cadastrar))
     }
@@ -23,7 +24,8 @@ class SugerirViewController: UIViewController {
     func cadastrar() {
         let nome = self.nomeInput.text
         let chocolate = self.chocolateInput.text
-        let sugestao = Sugestao(nome: nome!, chocolate: chocolate!)
+        let data = self.dataEntrega.date
+        let sugestao = Sugestao(nome: nome!, chocolate: chocolate!, data: data)
         self.cadastro.addSugestao(sugestao: sugestao)
 
 

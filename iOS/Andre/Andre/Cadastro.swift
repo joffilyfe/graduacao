@@ -8,11 +8,15 @@
 
 import Foundation
 
-class Cadastro:NSObject {
+class Cadastro:NSObject, NSCoding {
     var sugestoes:Array<Sugestao>
 
     override init() {
         self.sugestoes = Array<Sugestao>()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.sugestoes = aDecoder.decodeObject(forKey: "lista") as! Array<Sugestao>
     }
 
     func addSugestao(sugestao:Sugestao) {
@@ -27,4 +31,7 @@ class Cadastro:NSObject {
         return self.sugestoes.count
     }
 
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.sugestoes, forKey: "lista")
+    }
 }

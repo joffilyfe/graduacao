@@ -10,16 +10,12 @@ import UIKit
 
 class PrincipalTableViewController: UITableViewController {
 
-    var cadastro:Cadastro = Cadastro()
+    var cadastro:Cadastro!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.cadastro = appDelegate.cadastro
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
