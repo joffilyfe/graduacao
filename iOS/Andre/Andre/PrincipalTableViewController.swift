@@ -33,6 +33,18 @@ class PrincipalTableViewController: UITableViewController {
         return cell
     }
 
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(self.cadastro.sugestoes[indexPath.row])
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SugerirViewControllerID") as! SugerirViewController
+
+        vc.sugestao = self.cadastro.sugestoes[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

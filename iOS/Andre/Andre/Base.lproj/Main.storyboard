@@ -59,7 +59,7 @@
         <!--Sugestão-->
         <scene sceneID="cnb-yQ-s6C">
             <objects>
-                <viewController title="Sugestão" id="Vg7-nq-eFi" customClass="SugerirViewController" customModule="Andre" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SugerirViewControllerID" storyboardIdentifier="SugerirViewControllerID" title="Sugestão" id="Vg7-nq-eFi" customClass="SugerirViewController" customModule="Andre" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="whZ-Z8-qeK"/>
                         <viewControllerLayoutGuide type="bottom" id="UGj-Ed-8tQ"/>
