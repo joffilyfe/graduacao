@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var comanda:Comanda!
+    var historico: Historico!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -21,7 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (self.comanda == nil) {
             self.comanda = Comanda()
         }
+        
+        if (self.historico == nil) {
+            self.historico = Historico()
+        }
+        
 
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.84, green:0.13, blue:0.13, alpha:1.0)
+        UINavigationBar.appearance().tintColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)]
+
+        
         return true
     }
 

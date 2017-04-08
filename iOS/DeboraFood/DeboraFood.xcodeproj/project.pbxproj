@@ -17,6 +17,8 @@
 		84962FB81E9804C700D9F767 /* CardapioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962FB71E9804C700D9F767 /* CardapioTableViewController.swift */; };
 		84962FBB1E98087E00D9F767 /* LancheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962FBA1E98087E00D9F767 /* LancheViewController.swift */; };
 		84962FBF1E9810C800D9F767 /* ComandaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962FBE1E9810C800D9F767 /* ComandaTableViewController.swift */; };
+		CE5DEE771E98681800ACD004 /* HistoricoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DEE761E98681800ACD004 /* HistoricoTableViewController.swift */; };
+		CE5DEE791E98683900ACD004 /* Historico.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DEE781E98683900ACD004 /* Historico.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		84962FB71E9804C700D9F767 /* CardapioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardapioTableViewController.swift; sourceTree = "<group>"; };
 		84962FBA1E98087E00D9F767 /* LancheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LancheViewController.swift; sourceTree = "<group>"; };
 		84962FBE1E9810C800D9F767 /* ComandaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComandaTableViewController.swift; sourceTree = "<group>"; };
+		CE5DEE761E98681800ACD004 /* HistoricoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoTableViewController.swift; sourceTree = "<group>"; };
+		CE5DEE781E98683900ACD004 /* Historico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Historico.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				84962FB71E9804C700D9F767 /* CardapioTableViewController.swift */,
 				84962FBA1E98087E00D9F767 /* LancheViewController.swift */,
 				84962FBE1E9810C800D9F767 /* ComandaTableViewController.swift */,
+				CE5DEE761E98681800ACD004 /* HistoricoTableViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				84962FB11E97FFD000D9F767 /* Lanche.swift */,
 				84962FB31E98011200D9F767 /* Comanda.swift */,
+				CE5DEE781E98683900ACD004 /* Historico.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -183,11 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5DEE771E98681800ACD004 /* HistoricoTableViewController.swift in Sources */,
 				84962FB81E9804C700D9F767 /* CardapioTableViewController.swift in Sources */,
 				84962F991E97FEF700D9F767 /* AppDelegate.swift in Sources */,
 				84962FB21E97FFD000D9F767 /* Lanche.swift in Sources */,
 				84962FA11E97FEF700D9F767 /* DeboraFood.xcdatamodeld in Sources */,
 				84962FBB1E98087E00D9F767 /* LancheViewController.swift in Sources */,
+				CE5DEE791E98683900ACD004 /* Historico.swift in Sources */,
 				84962FBF1E9810C800D9F767 /* ComandaTableViewController.swift in Sources */,
 				84962FB41E98011200D9F767 /* Comanda.swift in Sources */,
 			);
@@ -349,6 +357,7 @@
 				84962FAC1E97FEF700D9F767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

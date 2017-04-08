@@ -20,7 +20,9 @@ class LancheViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Detalhes do lanche"
+        navigationItem.title = "Detalhes"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pedir", style: .plain, target: self, action: #selector(adicionar))
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,11 +38,12 @@ class LancheViewController: UIViewController {
     }
 
 
-    @IBAction func pedir(_ sender: Any) {
+    @IBAction func adicionar(_ sender: Any) {
         let ad = UIApplication.shared.delegate as! AppDelegate
         let lanche = Lanche(nome: self.lanche.nome, valor: self.lanche.valor, descricao: self.lanche.descricao)
         lanche.qtd = Int(self.stepQtd.value)
         ad.comanda.add(lanche: lanche)
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

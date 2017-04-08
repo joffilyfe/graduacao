@@ -1,47 +1,32 @@
 //
-//  ComandaTableViewController.swift
+//  HistoricoTableViewController.swift
 //  DeboraFood
 //
-//  Created by admin on 07/04/17.
+//  Created by Joffily Ferreira dos Santos on 07/04/17.
 //  Copyright © 2017 Joffily. All rights reserved.
 //
 
 import UIKit
 
-class ComandaTableViewController: UITableViewController {
-
-    var comanda:Comanda!
+class HistoricoTableViewController: UITableViewController {
+    var historico: Historico!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(finalizar))
 
         let ad = UIApplication.shared.delegate as! AppDelegate
+        self.historico = ad.historico
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
-        self.comanda = ad.comanda
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func finalizar() {
-        print("Finalizado")
-        let total = comanda.total()
-        
-        let alertController = UIAlertController(title: "Pedido finalizado", message: "O valor total do seu pedido foi: R$ \(total)", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-        {
-            (result : UIAlertAction) -> Void in
-            print("You pressed OK")
-            
-            let ad = UIApplication.shared.delegate as! AppDelegate
-            
-            ad.historico.comandas.append(self.comanda)
-            ad.comanda = Comanda()
-            self.navigationController?.popViewController(animated: true)
-            
-        }
-        alertController.addAction(okAction)
-        
-        self.present(alertController, animated: true, completion: nil)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -53,22 +38,16 @@ class ComandaTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.comanda.quantidade()
+        return self.historico.comandas.count
     }
+
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "comanda_celula", for: indexPath)
-
-        let lanche = self.comanda.lanches[indexPath.row]
-
-        cell.textLabel?.text = "\(lanche.qtd!) \(lanche.nome!)  R$ \(lanche.valor * Decimal(lanche.qtd)) "
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historico_celula", for: indexPath)
+        let comanda = self.historico.comandas[indexPath.row]
+        
+        cell.textLabel?.text = "Total: R$ \(comanda.total()) - Qtd lanches: \(comanda.quantidade())"
         return cell
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.tableView.reloadData()
     }
 
     /*

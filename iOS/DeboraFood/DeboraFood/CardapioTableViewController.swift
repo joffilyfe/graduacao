@@ -16,7 +16,7 @@ class CardapioTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.lanches = Array<Lanche>()
-        self.lanches.append(Lanche(nome:"Pão Pizza", valor:4.50, descricao: "Um lindo pão no formato de pizza"))
+        self.lanches.append(Lanche(nome:"Pão Pizza", valor:4.50, descricao: "Um lindo pão no formato de pizza, queijo para dar e vender e um sabor incomparável."))
         self.lanches.append(Lanche(nome:"Coxinha", valor:1.0, descricao: "Coxinha quentinha gostosinha"))
         self.lanches.append(Lanche(nome:"Torta de chocolate", valor:5.00, descricao: "Uma baita torta feita com chocolate"))
     }
