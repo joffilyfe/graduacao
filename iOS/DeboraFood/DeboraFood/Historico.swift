@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Historico:NSObject {
+class Historico:NSObject, NSCoding {
     
     var comandas: Array<Comanda>
     
@@ -18,6 +18,14 @@ class Historico:NSObject {
 
     override init () {
         self.comandas = Array<Comanda>()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.comandas = aDecoder.decodeObject(forKey: "comandas") as! Array<Comanda>
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.comandas, forKey: "comandas")
     }
 
     

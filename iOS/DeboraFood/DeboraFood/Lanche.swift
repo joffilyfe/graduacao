@@ -29,12 +29,16 @@ class Lanche:NSObject, NSCoding {
 
     required init?(coder aDecoder: NSCoder) {
         self.nome = aDecoder.decodeObject(forKey: "nome") as! String
+        self.descricao = aDecoder.decodeObject(forKey: "descricao") as! String
         self.valor = aDecoder.decodeObject(forKey: "valor") as! Decimal
+        self.qtd = aDecoder.decodeObject(forKey: "qtd") as! Int
     }
 
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.nome, forKey: "nome")
+        aCoder.encode(self.descricao, forKey: "descricao")
         aCoder.encode(self.valor, forKey: "valor")
+        aCoder.encode(self.valor, forKey: "qtd")
     }
 
 }
